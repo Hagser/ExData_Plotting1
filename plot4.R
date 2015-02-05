@@ -15,7 +15,7 @@ for(i in 3:7)
 days <- strptime(paste(rd$Date, rd$Time, sep=" "), "%d/%M/%Y %H:%M:%S") 
 
 #plot to PNG
-png(filename="plot4.PNG",width=640,height=480)
+png(filename="plot4.png",width=640,height=480)
 #set plot parameters to add plots in 2 rows and 2 columns
 par(mfrow=c(2,2))
 #create plot for Global Active Power
