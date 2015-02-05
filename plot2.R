@@ -10,13 +10,11 @@ for(i in 3:7)
       rd[,i]<-as.double(rd[,i])
 #creates a list of datetimes
 days <- strptime(paste(rd$Date, rd$Time, sep=" "), "%d/%M/%Y %H:%M:%S") 
-#creates a list of values 
-GAPS <- rd$Global_active_power
 
 #plot to PNG
 png("plot2.png", width=640, height=480)
 #reset plot-row parameters
 par(mfrow=c(1,1))
-plot(days,GAPS,xlab="",ylab = "Global Active Power (kilowatts)",main="",col="black",type="l")
+plot(days,rd$Global_active_power,xlab="",ylab = "Global Active Power (kilowatts)",main="",col="black",type="l")
 #close device
 dev.off()
